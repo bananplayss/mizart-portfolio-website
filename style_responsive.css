@@ -1,0 +1,144 @@
+@media only screen and (max-width: 700px) {
+    body{
+        height: 100%;
+    }
+
+    .navigation{
+        margin-top: 3vw;
+        flex-wrap: wrap;
+        gap: 15px;
+        height: 5vh;
+        font-size: 4vw;
+        width: 95%;
+    }
+
+    .viewGallery{
+        margin-left: 0;
+        padding-right: 10px;
+    }
+
+    .viewGallery button{
+        display: none;
+    }
+
+    #viewGalleryText{
+        font-size: .8rem;
+    }
+
+    .content{
+        height: auto;
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+    .introduction img{
+        border-radius: 60%;
+        border: 6px solid white;
+        margin-top: 10%;
+        display: inline;
+        width: 70%;
+    }
+    
+    .mainbar{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin-top: 0vh;
+    }
+    .introduction{
+        height: auto;
+        width: 100%;
+    }
+    .introduction h1{
+        font-size: 1.7rem;
+    }
+
+    .descriptionText{
+        text-align: center;
+    }
+
+    .featuredArtwork {
+        width: 100%;
+    }
+
+    .featuredArtwork h3{
+        font-size: 1.4rem;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .artwork img{
+        height: 22vh;
+        border-radius: 20px; 
+    }
+
+    .artwork{
+        padding-top: 5px;
+        padding-left: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: hidden;
+        overflow-y: auto;
+        gap: 10px;
+    }
+
+    .viewAll{
+        padding-top: 20px;
+        display: flex;
+        align-content: end;
+        justify-content: center;
+        max-width: 80vw;
+    }
+    .viewAll button{
+        height: 50px;
+        width: 100%;
+        border-radius: 30px;
+    }
+
+
+    .footer{
+        line-height: 0.8;
+    }
+
+    .mainbarAbout{
+        margin-top: 0vw;
+    }
+
+    .myArtVideo{
+        width: 80%;
+    }
+
+    .gallery img{
+        height: 300px;
+        border-radius: 10px;
+        transition: .3s ease-in-out;
+        transform: scale(1.0);
+    }
+
+    .gallery img:hover{
+        transform: scale(1.05);
+    }
+
+    #introProfilePic{
+        border-radius: 60%;
+        border: 6px solid white;
+        margin-top: 5%;
+        display: inline;
+        width: 90%;
+        margin-left: 15%;
+    }
+
+    .aboutList{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footerAbout{
+        margin: auto auto;
+        width: 100%;
+        transform: none;
+    }
+
+}

@@ -1,0 +1,489 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("fonts/Quicksand-VariableFont_wght.ttf");
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    background: linear-gradient(
+    rgba(238, 212, 240, 0.2),
+    rgba(231, 206, 233, 0.4)
+    ), url(images/background.png);
+    backdrop-filter: blur(2px);
+    font-family: Quicksand;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow: hidden;
+
+    animation: shrink 40s infinite alternate;
+}
+
+@keyframes shrink {
+  0% {
+    background-size: 100% 100%;
+  }
+  100% {
+    background-size: 370% 370%;
+  }
+}
+
+.button{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    
+    font: inherit;
+    color: inherit;
+    outline: none;
+    transition: transform 0.2s;
+}
+
+.navigation{
+    display: flex;
+    margin: 20px 15px 15px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    align-items: center;
+    font-weight: bold;
+    gap: 60px;
+    height: 8vh;
+    font-size: 1.5rem;
+}
+
+.button:hover{
+    transform:scale(1.04,1.04) translate3d(0,0,0);
+}
+
+.navigation a{
+    text-decoration: none;
+}
+
+.homeNav a{
+    display: inline-block;
+    padding-left: 20px;
+    color: rgb(134, 165, 230);
+}
+
+.about{
+    color: rgb(109, 87, 150);
+}
+.myArt{
+    color: rgb(247, 175, 175);
+}
+.contact{
+    color: rgb(224, 219, 168);
+}
+
+.viewGallery{
+    margin-left: auto;
+    padding-right: 20px;
+}
+.viewGallery button{
+    border: dotted rgb(224, 164, 164);
+    background-color: rgb(247, 175, 175);
+    height: 45px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+#viewGalleryText{
+    color: white;
+    font-size: 1.2rem;
+    font-family: Quicksand;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.scrollable{
+    gap: 50px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1;
+    width: 100vw;
+}
+
+.content{
+    margin-left: 60px;
+    display: flex;
+    gap: 50px;
+    height: 80vh;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: auto ;
+    flex: 1;
+    width: 100vw;
+}
+
+
+
+.sidebar{
+    text-align: center;
+    width: 400px;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: -30px;
+}
+
+.sidebar img{
+    border-radius: 60%;
+    border: 8px solid white;
+    width: 15vw;
+    display: inline-block;
+    margin: 0;
+    flex-shrink: 0;
+    margin-top: 10%;
+    transition: .3s ease-in-out;
+}
+
+.sidebar img:hover{
+    transition: .3s ease-in-out;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(194, 98, 202, 0.5);
+    opacity: .85;
+}
+
+
+.sidebar img:hover::before{
+    
+    opacity: 1;
+    transform: rotate(-45deg) translateY(100%);
+}
+
+
+
+.sidebar h1{
+    margin: 0px;
+    padding: 0;
+    font-size: 2.5vw;
+    color: rgb(247, 175, 175);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.descriptionText{
+    font-size: 2vh;
+    word-break:normal;
+    text-align: left;
+    font-weight:bolder;
+    width: 100%;
+    color: rgba(138, 138, 138, 0.781);
+    text-shadow: 10px 7px 7px rgb(245, 218, 242);
+}
+
+#description{
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0px 30px;
+    line-height: 1.2;
+
+    max-width: 100%; 
+}
+
+#drawingSince{
+    margin-left: 30px;
+    display: block;
+    text-align: left;
+}
+
+.socials{
+    margin-top: 20px;
+    display: block;
+    height: auto;
+    text-align: left;
+    margin-left: 30px;
+    opacity: .7;
+    
+}
+.socials a{
+    font-size: 1.2vw;
+    text-decoration: none;
+    color: black;
+}
+
+#twitter{
+    color: black;
+}
+
+#discord{
+    color: rgb(65, 65, 211);
+}
+#patreon{
+    color: rgb(247, 165, 165);
+}
+#deviantart{
+    color: rgb(43, 185, 79);
+}
+
+.mainbar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70vw;
+    margin-top: 10vh;
+}
+
+#introProfilePic{
+    display: none;
+}
+
+.introduction{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    background: #FFFFFF;
+    background: linear-gradient(45deg, rgba(250, 250, 250, .6) 0%, rgba(250, 250, 250, 0.6) 50%, rgba(255, 255, 255, .3) 80%);
+    box-shadow: -1px -1px 2px rgba(145, 145, 145, 0.25) ;
+    border-radius: 60px 60px 0px 0px;
+}
+
+.introduction img{
+    display: none;
+}
+
+.introduction h1{
+    transform: translateX(-1%);
+    font-size: 2.4rem;
+    color: rgb(247, 165, 165);
+}
+
+.introduction p{
+    line-height: 1.5;
+    font-size: 1.3rem;
+    max-width: 700px;
+    padding-bottom: 20px;
+    padding-left: 5.5%;
+    margin: 0 auto;
+}
+
+.featuredArtwork {
+    width: 100%;
+    background: rgba(255, 240, 255, 1);
+    background: linear-gradient(164deg, rgba(250, 250, 250, .8) 0%, rgba(250, 250, 250, .6) 30%, rgba(255, 255, 255, 0) 80%);
+    backdrop-filter: blur(10px);
+    border-radius: 0px 0px 30px 2px;
+    height: auto;
+    
+    box-shadow: -1px 1px 2px rgba(145, 145, 145, 0.25) ;
+}
+
+.featuredArtwork h3{
+    font-size: 1.8rem;
+    color: rgb(247, 165, 165);
+    padding-left: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.artwork{
+    padding-top: 10px;
+    padding-left: 60px;
+    max-width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    gap: 20px;
+}
+
+.viewAll{
+    padding-top: 1vw;
+    padding-bottom: 10px;
+    display: flex;
+    align-content: end;
+    justify-content: center;
+    text-decoration: none;
+}
+.viewAll button{
+    border: dotted rgb(224, 164, 164);
+    background-color: rgb(247, 175, 175);
+    height: 45px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+.footer{
+    margin: 3% auto 0 auto; 
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(180deg, rgba(250, 250, 250) 0%, rgba(250, 250, 250, .4) 30%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 30px 30px 0px 0px;
+    display: block;
+}
+
+
+.aboutbar{
+    text-align: center;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    
+}
+
+.aboutbar img{
+    width: 15%;
+    border-radius: 60%;
+    border: 8px solid white;
+    display: inline-block;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.aboutQuestion{
+    font-size: 1.5rem;
+    font-family: Quicksand;
+    color: rgb(138, 145, 145);
+    font-weight: bold;
+}
+
+.aboutList{
+    width: 70%;
+    text-align: left;
+    font-size: 1.2rem;
+    font-family: Quicksand;
+    color: rgb(143, 146, 146);
+    font-weight: 500;
+}
+
+.mainbarAbout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 12vh;
+}
+
+.aboutArt{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin-right: 15%;
+
+    margin-top: 3vh;
+    gap: 50px;
+}
+
+.aboutArt img{
+    width: 40%;
+    border-radius: 50px;
+    border: solid rgba(158, 158, 158, 0.349) 5px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+hr{
+    border-color: rgba(255, 255, 255, 0.308);
+}
+
+.gallery{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: left;
+    margin-left: 15px;
+}
+
+.gallery img{
+    
+    border-radius: 0px;
+    height: 500px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.myArtVideo{
+    margin-left: 20px;
+    
+    width: 25%;
+    height: 30%;
+    border-radius: 40px;
+    padding-bottom: 30px;
+}
+.videos{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.myArtTitle{
+    font-size: 2.2rem;
+    word-break:normal;
+    text-align: center;
+    font-weight:bolder;
+    width: 100%;
+    color: rgba(236, 136, 136, 0.781);
+}
+
+.myArtSection{
+    font-size: 2.3rem;
+    word-break:normal;
+    text-align: center;
+    font-weight:bolder;
+    width: 100%;
+    color: rgba(233, 185, 153, 0.781);
+}
+
+.sketches{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 6vh;
+}
+.sketches img{
+    height: 400px;
+    border-radius: 40px;
+}
+
+
+.footerAbout{
+    margin: auto auto;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(180deg, rgba(250, 250, 250) 0%, rgba(250, 250, 250, .4) 30%, rgba(255, 255, 255, 0) 70%);
+    border-radius: 30px 30px 0px 0px;
+}
+
+.footerAbout p{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.footer p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artwork img{
+    height: 30vh;
+    border-radius: 20px;
+}
+
+.artwork img {
+	transform: scale(1.0);
+	transition: .3s ease-in-out;
+}
+.artwork img:hover{
+	transform: scale(1.05);
+}
+
+@import url("style_responsive.css");
